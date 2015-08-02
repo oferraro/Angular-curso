@@ -24,9 +24,9 @@
 			</tr>
 			<tr ng-repeat="tarea in listadoTareas">
 				<td>{{tarea.descripcion}}</td>
-				<td><input type="checkbox" ng-model="tarea.completado"></td>
+				<td><input type="checkbox" ng-model="tarea.completado" ng-click="updateDate(tarea)"></td>
 				<td>{{tarea.completado}}</td>
-				<td>{{fecha | date:'dd/MM/yyyy'}}</td>
+				<td>{{tarea.fecha | date:'dd/MM/yyyy hh:mm:ss'}}</td>
 			</tr>
 			
 		</table>
