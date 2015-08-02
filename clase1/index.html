@@ -1,0 +1,36 @@
+<html data-ng-app='misTareas'>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div class='container' ng-controller='nombreCtrl'>
+
+		<div class="page-header">
+		<h1>Tareas de {{nombre}}</h1><p>Incompletos: <span class="label" ng-class='estoyAlHorno()'>{{contarIncompletos()}}</span></p>
+		</div>
+			<input type="text" class='form-control' ng-model='nuevaTarea'>
+			<button class='btn' ng-click="agregarTarea(nuevaTarea)">Agregar</button>
+	
+		<table class='table table-striped'>
+			<tr>
+				<th>Descripcion</th>
+				<th>Completado</th>
+				<th>Texto Completado</th>
+				<th>Fecha de completado</th>
+			</tr>
+			<tr ng-repeat="tarea in listadoTareas">
+				<td>{{tarea.descripcion}}</td>
+				<td><input type="checkbox" ng-model="tarea.completado"></td>
+				<td>{{tarea.completado}}</td>
+				<td>{{fecha | date:'dd/MM/yyyy'}}</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</body>
+</html>
