@@ -1,0 +1,8 @@
+.cointainer {
+	margin: 0 30px;
+}
+
+.block {
+	width: 200px;
+	display: inline-block;
+}
