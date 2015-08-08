@@ -12,8 +12,7 @@ catalogApp.controller('boxesController', function ($http, $scope) {
 		]; // listadoProducgtos
 	$scope.productLists = productLists; 
 	$scope.cotizacion = 1;
-	$scope.alternativeText = "No se encontraron resultados";
-	
+
 	$scope.buscar = function (p) { // Filtro buscarProducto
 		if ($scope.valB) {
 			if(p.titulo.toLowerCase().indexOf($scope.valB) !== -1) {

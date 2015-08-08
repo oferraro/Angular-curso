@@ -62,7 +62,7 @@
 			</div>
 		</div>
 		
-		<div class="row" data-ng-if="productLists.length <= 0">
+		<div class="row" data-ng-if="(productLists | filter:buscar).length <= 0">
 			No se encontraron resultados
 		</div>
 		
