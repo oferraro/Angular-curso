@@ -1,0 +1,8 @@
+<div data-ng-repeat="producto in listadoProductos">
+	{{producto.id}}
+	{{producto.nombre}}
+	{{producto.categoria}}
+	{{producto.precio}}
+	<button class="btn btn-danger">Agregar al carrito</button>
+	<button ng-click="carritoSrv.borrar(producto.id)">borrar</button>
+</div>

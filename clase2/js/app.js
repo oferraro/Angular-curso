@@ -42,7 +42,7 @@ catalogApp.controller('boxesController', function ($http, $scope) {
 	
 	
 	
-	/*
+	
 $http.get('http://jsonplaceholder.typicode.com/photos').
   then(function(response) {							// productosCtrl
 		var boxes = [];
@@ -58,6 +58,6 @@ $http.get('http://jsonplaceholder.typicode.com/photos').
 	  console.log('error');
     // called asynchronously if an error occurs
     // or server returns response with an error status.
-  }); */
+  }); 
 	
 });

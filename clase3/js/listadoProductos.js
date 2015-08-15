@@ -1,0 +1,23 @@
+(function(){
+//clase3App.controller();	
+	/*
+$scope.listadoProductos = [
+	{
+		id:1,
+		nombre:'p1',
+		categoria:'autos',
+		precio:100
+	},
+	{
+		id:3,
+		nombre:'p3',
+		categoria:'camioneta',
+		precio:300
+	},
+	{
+		id:4,
+		nombre:'p4',
+		categoria:'autos',
+		precio:200
+	}];*/
+})()
