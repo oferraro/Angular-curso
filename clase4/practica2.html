@@ -21,7 +21,8 @@
 <header>	
 	<nav class="navbar navbar-inverse">
 	   <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+		<li class="active"><a data-ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a data-ui-sref="list">Productos <span class="sr-only">(current)</span></a></li>
         <li data-ng-repeat="categoria in productLists | distintos:'categoria'" data-ng-click="selectCategory(categoria)"><a href="#/{{categoria}}">{{categoria}}</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -47,16 +48,7 @@
 			<input type="text" name="convertir" data-ng-model="cotizacion1">	<button data-ng-click="convert(cotizacion1)">Buscar</button>
 		</div>
 		
-		<div class="block" data-ng-repeat="prod in productLists | filter:buscar | filter:filterByCategory">
-			<div class="thumbnail">
-				<img src="{{prod.img}}" alt="...">
-				<div class="caption">
-				<h3>{{prod.titulo |uppercase}}</h3>
-				<p>Precio {{prod.precio * cotizacion |currency:" u$s " }}</p>
-				<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-				</div>
-			</div>
-		</div>
+		<div data-ui-view></div>
 		
 		<div class="row" data-ng-if="(productLists | filter:buscar).length <= 0">
 			No se encontraron resultados
@@ -81,6 +73,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
 <script src="filters/filtros-utiles.js"></script>
+<script src="js/detalleProducto.js"></script>
 </body>
 
 </html>

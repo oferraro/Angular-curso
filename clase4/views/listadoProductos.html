@@ -1,0 +1,10 @@
+<div class="block" data-ng-repeat="prod in productLists | filter:buscar | filter:filterByCategory">
+	<div class="thumbnail">
+		<img src="{{prod.img}}" alt="...">
+		<div class="caption">
+		<h3>{{prod.titulo |uppercase}}</h3>
+		<p>Precio {{prod.precio * cotizacion |currency:" u$s " }}</p>
+		<p><a href="#" class="btn btn-primary" data-ui-sref="producto({prodId:prod.id})" role="button">Ver</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		</div>
+	</div>
+</div>

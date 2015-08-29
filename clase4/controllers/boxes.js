@@ -1,4 +1,4 @@
-catalogApp.controller('boxesController', function ($http, $scope) {
+catalogApp.controller('boxesController', function ($http, $scope, $state) {
 	$scope.boxes = [];
 	var productLists = [
 		{id: 1,  titulo:"Titulo 1",  precio: "3",  categoria: "autos", img: "imgs/thumbnail.jpg"},
