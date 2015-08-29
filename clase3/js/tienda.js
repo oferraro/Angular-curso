@@ -26,7 +26,6 @@ var clase3App = angular.module('clase3App', ['ui.router']);
 		}
 	});
 	clase3App.controller('tiendaCtrl', function ($scope) {
-		$scope.carritoSrv = carritoSrv;
 		$scope.listadoProductos = [
 		{
 			id:1,

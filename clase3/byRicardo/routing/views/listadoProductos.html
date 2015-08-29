@@ -1,0 +1,9 @@
+<div ng-controller='listadoProductosCtrl'>
+		<div class='positive' ng-repeat='producto in listadoProductos'>
+			<h1>{{producto.nombre | uppercase}}</h1>
+			<p>{{producto.categoria}}</p>
+			<p>{{producto.precio | currency}}</p>
+			<button ng-click='carrito.agregar(producto)'>Agregar al carrito</button>
+		</div>
+		<a ui-sref='carrito'>Ir al carrito</a>
+	</div>

@@ -1,0 +1,15 @@
+<div ng-controller='carritoCtrl'>
+	<table class="table table-striped">
+		<tr>
+			<th>Codigo</th>
+			<th>Descripcion</th>
+			<th>Precio</th>
+			<th>Acciones</th>
+		</tr>
+		<tr ng-repeat="producto in listadoCarrito">
+			<td>{{producto.id}}</td>
+			<td>{{producto.nombre}}</td>
+			<td>{{producto.precio | currency}}</td>
+			<td><button ng-click='carrito.borrar(producto.id)'>Borrar</button>
+		</tr>
+</div>
